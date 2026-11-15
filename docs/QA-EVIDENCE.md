@@ -39,3 +39,9 @@ The curated public 28-file checkout was compiled on WIN11-181 with .NET SDK 9.0.
 - Machine-readable evidence: [PUBLIC-REBUILD-REPORT.json](PUBLIC-REBUILD-REPORT.json).
 
 This demonstrates **repeatable successful compilation and package verification**, not bit-identical deterministic builds. No GUI test or HUTECH sign-in was run. The original private analysis repo and official vendor code remain private.
+
+## Public GitHub asset download and fresh-extraction verification
+
+On 15 November 2026, the published 73,502,622-byte Windows ZIP was **downloaded back from the public GitHub Release** into a clean directory on WIN11-181. SHA-256 matched the build archive and GitHub's declared asset digest. Fresh extraction produced 487 files including CHECKSUMS.json. The 486 manifest entries passed independent size/hash checks, **13/13 compiled C# policies passed**, and **6/6 offline EXE checks passed**. There were **0 reported QA failures**.
+
+Machine-readable proof: [GITHUB-RELEASE-ROUNDTRIP-20261115.json](GITHUB-RELEASE-ROUNDTRIP-20261115.json). This still does **not** verify GUI, login, or vendor exam parity.
