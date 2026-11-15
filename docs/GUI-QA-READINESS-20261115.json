@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-15",
+  "subject": "Interactive Windows UI acceptance readiness for independent ITCoder Study Browser",
+  "releaseRepository": "https://github.com/trinhtanphat/itcoder-study-browser-public",
+  "sourceReleaseTag": "independent-itcoder-windows-public-v0.5.9-20261115",
+  "windows181": {
+    "isolatedInteractiveQaSessionAvailable": false,
+    "protectedUserSessionId": 2,
+    "desktopWorkerSessionIds": [
+      2
+    ],
+    "windowsSandboxEnabled": false,
+    "appLaunchedInUserSession2": false,
+    "appLaunchedFromServiceSession0": false
+  },
+  "proxmox161": {
+    "virtualMachineId": 100,
+    "guestAgentResponsive": true,
+    "guestInteractiveUsersCount": 0,
+    "rdp3389ReachableFromHost": false,
+    "virtualMachineModified": false
+  },
+  "automation": {
+    "implementation": "Windows UI Automation via PowerShell; programmatically validates native GUI and HTTPS navigation",
+    "executableSha256Pinned": "3ED8F83BDECC2F4FB8CB7ACA1552BB48B7CD30605CDA47308151ED4A8FAF3062",
+    "initialTestsPassed": 7,
+    "session0GateRefused": true,
+    "session2GateRefused": true,
+    "syntheticUrl": "https://example.org/",
+    "testRunMode": "safe negative tests only",
+    "interactiveAppLaunched": false,
+    "guiVerified": false,
+    "websiteLoginTested": false,
+    "officialSecureExamParityVerified": false
+  },
+  "result": "BLOCKED_NOT_TESTED",
+  "reason": "No available and authorized isolated interactive GUI session without affecting WIN11-181 Session 2; QEMU guest on PVE161 has no logged-in desktop and no reachable RDP",
+  "notes": "Use scripts/test-interactive-gui.ps1 from a fresh authorized interactive Windows QA desktop to generate factual UIA evidence; never label a static or non-GUI test as GUI PASS."
+}
