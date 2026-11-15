@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>ITCoderStudyQA</AssemblyName>
+    <Product>ITCoder Study QA (independent, not the official exam browser)</Product>
+    <Description>Separately authored WebView2 HTTPS QA browser. Does not provide exam lockdown, attestation or browser identity.</Description>
+    <Version>0.5.9</Version>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DefineConstants>$(DefineConstants);ITCODER_QA</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../windows-study/*.cs" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4258.31" />
+  </ItemGroup>
+  <Target Name="RemoveUnusedWebView2Wpf" BeforeTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <Reference Remove="$(NugetRoot)\lib_manual\net5.0-windows10.0.17763.0\Microsoft.Web.WebView2.Wpf.dll" />
+    </ItemGroup>
+  </Target>
+</Project>
