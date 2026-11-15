@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-15",
+  "subject": "Independent Windows 11 VM cross-machine validation for public ITCoder Study Browser v0.5.9",
+  "publicSource": "https://github.com/trinhtanphat/itcoder-study-browser-public",
+  "releaseTag": "independent-itcoder-windows-public-v0.5.9-20261115",
+  "vmHostAlias": "PVE161-HOST",
+  "vmId": 100,
+  "guestOs": "Windows 11",
+  "qaTransport": "QEMU Guest Agent file-write from a local SHA-256-verified release archive; no guest HTTP port opened",
+  "guestWorkingDirectory": "C:\\QA\\ITCoderStudy-v059",
+  "originalGithubZipSha256": "4E300286A230B1B6D0898F4F921643F620EF09F584F81660EEA2C308D17D22AE",
+  "guestComputedZipSha256": "4E300286A230B1B6D0898F4F921643F620EF09F584F81660EEA2C308D17D22AE",
+  "exeSHA256": "3ED8F83BDECC2F4FB8CB7ACA1552BB48B7CD30605CDA47308151ED4A8FAF3062",
+  "package": {
+    "manifestFilesChecked": 486,
+    "extractedFiles": 487,
+    "fileIntegrityPassed": true,
+    "compiledPolicyChecksPassed": 13,
+    "offlineExecutionProbesPassed": 6,
+    "failures": 0
+  },
+  "cliExitCodes": {
+    "ui-preflight": 40,
+    "self-test": 0,
+    "runtime-check": 0,
+    "verify": 0,
+    "diagnose": 0,
+    "offline-ui-smoke": 40,
+    "audit-temp-profiles": 0
+  },
+  "runtime": {
+    "webView2Present": true,
+    "uiSessionEligible": false,
+    "sessionZeroGuardPassed": true
+  },
+  "interaction": {
+    "guiVerified": false,
+    "liveSiteLoginTested": false,
+    "secureExamVendorParityVerified": false
+  },
+  "environmentChange": {
+    "vmRestarted": false,
+    "guestFirewallChanged": false,
+    "guestUsersChanged": false,
+    "productionDeployed": false,
+    "win181Session2Touched": false
+  },
+  "evidence": "The real release ZIP was moved to a separate Windows 11 guest; Windows certutil confirmed its SHA-256. The extracted EXE was executed from QEMU Guest Agent Session 0; the public verify-windows-portable-nongui.ps1 reported all six checks passed, all 486 file hashes matched and 13 compiled policies passed.",
+  "limitation": "Results demonstrate reproducible offline operation on a second Windows 11 installation, NOT GUI acceptance or HUTECH secure exam equivalence."
+}
