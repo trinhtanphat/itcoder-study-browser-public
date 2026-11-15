@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "subject": "Independent Windows x64 ITCoder Study Browser v0.5.9 from public source; not official HUTECH examination client",
+  "date": "2026-11-15",
+  "repository": "https://github.com/trinhtanphat/itcoder-study-browser-public",
+  "sourceBaseCommit": "410c427f397915c4e685ead50966764ea4dea0f1",
+  "archiveName": "ITCoderStudyQA-v0.5.9-Windows-x64-portable.zip",
+  "archiveBytes": 73502622,
+  "archiveSHA256": "4E300286A230B1B6D0898F4F921643F620EF09F584F81660EEA2C308D17D22AE",
+  "exeSHA256": "3ED8F83BDECC2F4FB8CB7ACA1552BB48B7CD30605CDA47308151ED4A8FAF3062",
+  "filesVerified": 486,
+  "compiledPoliciesPassed": 13,
+  "nonGuiExecutionChecksPassed": 6,
+  "publicSourceRegressionPassed": 3,
+  "targetedSecretPatternMatches": 0,
+  "guiVerified": false,
+  "liveWebsiteLoginVerified": false,
+  "vendorSecureExamParityVerified": false,
+  "productionChanged": false,
+  "session2Changed": false,
+  "note": "The public-source build completed and was packaged and re-extracted; the actual extracted EXE passed the offline verification gate. Different outputs across builds do not establish bit-for-bit reproducibility."
+}

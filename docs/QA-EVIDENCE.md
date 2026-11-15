@@ -29,3 +29,13 @@ their SHA-256. The download can be checked with `Get-FileHash -Algorithm SHA256`
 
 These require an authorized isolated interactive desktop and test account.
 A headless/Session 0 executable test does not certify any GUI behavior.
+
+## Independent rebuild from the public-source checkout (15 November 2026)
+
+The curated public 28-file checkout was compiled on WIN11-181 with .NET SDK 9.0.319 and pinned WebView2 NuGet 1.0.4258.31. The published portable ZIP was extracted afresh and the real EXE was verified in Windows Session 0. **486/486 file checksums, 13/13 compiled policy checks, 6/6 offline execution checks, 3/3 public source tests passed**.
+
+- Public rebuilt ZIP: `ITCoderStudyQA-v0.5.9-Windows-x64-portable.zip` — SHA-256 `4E300286A230B1B6D0898F4F921643F620EF09F584F81660EEA2C308D17D22AE` (73,502,622 bytes).
+- Public rebuilt EXE: SHA-256 `3ED8F83BDECC2F4FB8CB7ACA1552BB48B7CD30605CDA47308151ED4A8FAF3062`.
+- Machine-readable evidence: [PUBLIC-REBUILD-REPORT.json](PUBLIC-REBUILD-REPORT.json).
+
+This demonstrates **repeatable successful compilation and package verification**, not bit-identical deterministic builds. No GUI test or HUTECH sign-in was run. The original private analysis repo and official vendor code remain private.
