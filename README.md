@@ -23,3 +23,7 @@ The executable's automated `--self-test`, `--runtime-check`, `--verify`, `--diag
 See [QA evidence](docs/QA-EVIDENCE.md) and [GUI acceptance instructions](docs/GUI-ACCEPTANCE.md). Release ZIP integrity and offline policy verification are not the same as live GUI and site login acceptance.
 
 **No vendor binaries, installers, decompiled proprietary source, cookies, tokens, student data, or exam-protection bypasses are distributed.** The original analysis repository remains private. Public visibility does **not** grant a software reuse license automatically; vendor rights and trademarks remain with their respective owners.
+
+## Independent second-machine QA
+
+The v0.5.9 release ZIP was also validated inside a separate Windows 11 VM on Proxmox 161: **486/486 manifest files, 13/13 compiled policy checks and 6/6 offline executable probes PASS**. This is independent runtime evidence, not a GUI or secure exam acceptance test. See [the VM161 proof](docs/VM161-QA-20261115.md).

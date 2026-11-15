@@ -45,3 +45,7 @@ This demonstrates **repeatable successful compilation and package verification**
 On 15 November 2026, the published 73,502,622-byte Windows ZIP was **downloaded back from the public GitHub Release** into a clean directory on WIN11-181. SHA-256 matched the build archive and GitHub's declared asset digest. Fresh extraction produced 487 files including CHECKSUMS.json. The 486 manifest entries passed independent size/hash checks, **13/13 compiled C# policies passed**, and **6/6 offline EXE checks passed**. There were **0 reported QA failures**.
 
 Machine-readable proof: [GITHUB-RELEASE-ROUNDTRIP-20261115.json](GITHUB-RELEASE-ROUNDTRIP-20261115.json). This still does **not** verify GUI, login, or vendor exam parity.
+
+## Cross-machine validation (VM161)
+
+A separate Windows 11 VM revalidated the GitHub release SHA-256 and ran the released EXE and official public offline verification script. **486/486 file checks, 13/13 compiled policies and 6/6 offline checks passed** with installed WebView2 Runtime; Session 0 rejected GUI as expected. [Sanitized technical report](VM161-QA-20261115.json). This does not prove GUI or HUTECH login.
